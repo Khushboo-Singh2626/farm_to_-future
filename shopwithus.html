@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Store - Shop Items</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    /* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo h1 {
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+    background-color: #fff;
+}
+
+.product-list h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.product-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.product-card .price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+.product-card .add-to-cart {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.product-card .add-to-cart:hover {
+    background-color: #45a049;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .products {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .product-card {
+        max-width: 100%;
+    }
+}
+
+</style>
+<body>
+
+    <header>
+        <div class="logo">
+            <h1>Online Store</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Cart</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="product-list">
+            <h2>Our Products</h2>
+            <div class="products">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <img src="1 Bio NPK Fertilizer Liquid For Organic Gardening.png" alt="Product 1">
+                    <h3>Bio NPK Fertilizer Liquid For Organic Gardening</h3>
+                    <p>This is a short description of product 1. It’s a great product for all your needs.</p>
+                    <p class="price">$19.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <img src="2 Organic Potash Fertilizer For Gardening (900G).png" alt="Product 2">
+                    <h3>Organic Potash Fertilizer For Gardening (900G)</h3>
+                    <p>This product is designed to give you the best experience. Get yours now!</p>
+                    <p class="price">$25.49</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <img src="3 Pride Lands Premium Organic Bloom Fertilizer With No Fillers.png" alt="Product 3">
+                    <h3>Pride Lands Premium Organic Bloom Fertilizer With No Fillers</h3>
+                    <p>High-quality material and durable for long-term use. Perfect for your needs.</p>
+                    <p class="price">$32.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card">
+                    <img src="4 Organic Plant Growth Promoter (Liquid Fertilizer).png" alt="Product 4">
+                    <h3>Organic Plant Growth Promoter (Liquid Fertilizer)</h3>
+                    <p>Stylish and functional, this product is a must-have for anyone.</p>
+                    <p class="price">$15.00</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card">
+                    <img src="5 Organic Bio Fertilizers, Grade Standard Bio-Tech Grade.png" alt="Product 5">
+                    <h3>Organic Bio Fertilizers, Grade Standard Bio-Tech Grade</h3>
+                    <p>This product comes with everything you need to enjoy it to the fullest.</p>
+                    <p class="price">$29.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card">
+                    <img src="6 20-20-20 Premium All-Purpose Garden Fertilizer  30 Lbs.png" alt="Product 6">
+                    <h3>Premium All-Purpose Garden Fertilizer</h3>
+                    <p>A top-rated product that guarantees satisfaction with every use.</p>
+                    <p class="price">$18.49</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="product-card">
+                    <img src="7 Ugaoo Organic Bone Meal Powder Fertilizer For Plants & Home Gardening.png" alt="Product 7">
+                    <h3>Ugaoo Organic Bone Meal Powder Fertilizer For Plants & Home Gardening</h3>
+                    <p>Perfect for outdoor activities, this item is sure to impress.</p>
+                    <p class="price">$22.99</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="product-card">
+                    <img src="8 Industrial Grade Organic Fertilizers And Manure.png" alt="Product 8">
+                    <h3>Industrial Grade Organic Fertilizers And Manure</h3>
+                    <p>Durable and reliable, this product will serve you well for years to come.</p>
+                    <p class="price">$12.75</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+
+                <!-- Product 9 -->
+                <div class="product-card">
+                    <img src="9 Oziva Organic Plant Protein Powder (1000g).png" alt="Product 9">
+                    <h3>Oziva Organic Plant Protein Powder (1000g)</h3>
+                    <p>Enjoy high performance with this sleek and modern product.</p>
+                    <p class="price">$17.50</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+
+                <!-- Product 10 -->
+                <div class="product-card">
+                    <img src="10 Natures Plus Vermi Compost - Organic Manure, 1 Kg.png" alt="Product 10">
+                    <h3>Natures Plus Vermi Compost - Organic Manure, 1 Kg</h3>
+                    <p>Designed for maximum comfort and usability. A great addition to your collection.</p>
+                    <p class="price">$20.00</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="11 Tropica Premium Fertiliser 750 Ml.png" alt="Product 10">
+                    <h3>Tropica Premium Fertiliser 750 Ml</h3>
+                    <p>Designed for maximum comfort and usability. A great addition to your collection.</p>
+                    <p class="price">$20.00</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <img src="12 Casa De Amor Cow Manure & Compost (900 Gm) + Organic Liquid Essential.png" alt="Product 10">
+                    <h3>Casa De Amor Cow Manure & Compost (900 Gm) + Organic Liquid Essential</h3>
+                    <p>Designed for maximum comfort and usability. A great addition to your collection.</p>
+                    <p class="price">$20.00</p>
+                    <button class="add-to-cart">Add to Cart</button>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Online Store. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

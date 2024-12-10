@@ -1,0 +1,76 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.header {
+  background-color: #5cb85c;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+.main-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.calendar-section, .task-section, .task-status {
+  background: white;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+/* Task Categories */
+.task-category {
+  margin-top: 1rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 0.5rem;
+  background-color: #f9f9f9;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+li button {
+  background-color: #5cb85c;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 0.3rem 0.6rem;
+}
+
+li button.complete {
+  background-color: #0275d8;
+}
+
+li button:hover {
+  opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .main-container {
+    flex-wrap: nowrap;
+  }
+}

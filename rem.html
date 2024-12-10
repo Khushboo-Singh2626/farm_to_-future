@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Farming Scheduler</title>
+<link rel="stylesheet" href="rem.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Farming Scheduler</h1>
+  </header>
+  <main class="main-container">
+    <section class="calendar-section">
+      <h2>Task Calendar</h2>
+      <div id="calendar"></div>
+    </section>
+    <section class="task-section">
+      <h2>Schedule a Task</h2>
+      <form id="task-form">
+        <label for="task-date">Date:</label>
+        <input type="date" id="task-date" required>
+        <label for="task-name">Task:</label>
+        <input type="text" id="task-name" placeholder="Enter task name" required>
+        <button type="submit">Add Task</button>
+      </form>
+    </section>
+    <section class="task-status">
+      <h2>Tasks</h2>
+      <div class="task-category">
+        <h3>Upcoming</h3>
+        <ul id="upcoming-tasks"></ul>
+      </div>
+      <div class="task-category">
+        <h3>Pending</h3>
+        <ul id="pending-tasks"></ul>
+      </div>
+      <div class="task-category">
+        <h3>Completed</h3>
+        <ul id="completed-tasks"></ul>
+      </div>
+    </section>
+  </main>
+<script src = "rem.js"></script>
+</body>
+</html>

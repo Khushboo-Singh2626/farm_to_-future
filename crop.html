@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crop Details</title>
+  <link rel="stylesheet" href="forest.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Navigation bar styles */
+    header {
+      background-color: #333;
+      padding: 10px 0;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    .navbar .logo img {
+      height: 100px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    .quote-button {
+      background-color: green;
+      color: white;
+      padding: 8px 15px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    /* Adjust the space below the navbar */
+    .content-container {
+      margin-top: 20px; /* This will add space between the navbar and content */
+      padding: 20px;
+      background-color: #f9f9f9;
+      /* background: url('far1.jpg') */
+     
+    }
+
+    /* Crop Details Section Styling */
+    #crop-details {
+      background-color: #fff;
+      padding: 15px;
+      border: 1px solid #ccc;
+      margin-top: 50px; /* Ensures there’s space below the navbar */
+      /* background: url('OIP.jpg') */
+      
+    }
+    .content-container p{
+      line-height: 1.5rem;
+      
+    }
+    h2 {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation bar -->
+  <header>
+    <div class="navbar">
+      <div class="logo">
+        <img src="logo-removebg-preview.png" alt="Logo">
+      </div>
+      <div class="nav-links">
+        <a href="forest.html">Home</a>
+        <a href="rem.html">Reminder</a>
+        <a href="#">Weather</a>
+        <a href="shopwithus.html">Shopping</a>
+        <a href="#">Contact</a>
+        <a href="#">Ask</a>
+      </div>
+      <a href="register.html" class="quote-button">LOGIN/SIGNUP</a>
+    </div>
+  </header>
+
+  <!-- Content Section -->
+  <div class="content-container">
+    <!-- Crop Details Section -->
+    <div id="crop-details">
+      <h2>Crop Information</h2>
+      <p id="details-content">Loading...</p>
+    </div>
+  </div>
+
+  <!-- Add JSON File -->
+  <script>
+    // The full JSON data for crops
+    const cropsData = [
+      {
+        "name": "Rice",
+        "description": "Rice is a kharif crop which needs ample sunshine and water. Rice is a staple food for over half the world's population. It is a cereal grain and is primarily grown in tropical and subtropical regions. In India, rice is an integral part of the culture and diet, with states like West Bengal, Uttar Pradesh, and Punjab leading in production.",
+        "climatic_conditions": "It needs warm and humid climate, and can grow on varied altitudes under suitable temperature. Since it needs plenty of water, monsoon lands are most suitable. Rice requires a warm and humid climate with a temperature range of 20°C to 40°C. It grows best in regions with an annual rainfall of 100-200 cm. During the growing season, consistent water supply through monsoon rains or irrigation is critical. The level of humidity should be high, and rainfall above 100cm is required for good crop.",
+        "organic_fertilizer": "Compost, vermicompost, and green manure such as Sesbania and cow dung manure are effective organic fertilizers for rice. Azolla, a nitrogen-fixing aquatic fern, can also be used to enhance nitrogen levels in paddy fields. Rice farming required a very fertile land with a good water supply where seeds were sown to reap seedlings that once uprooted were planted in the fields to yield paddy.",
+        "soil_type": "Clayey loam or alluvial soils with good water retention capacity are ideal for rice cultivation. The soil should be well-drained during the planting phase and waterlogged during the growth phase for optimal yield. Since it needs plenty of water, monsoon lands are most suitable. Fertile clayey or loamy soil are the best for rice cultivation. Deltas, flood plains, estuaries, river valleys and coastal plains are most suitable for rice cultivation.",
+        "related_video": "https://www.youtube.com/watch?v=FVtmRf_awBU"
+      },
+      {
+        "name": "Wheat",
+        "description": "Wheat is a cool-season crop that is an essential staple food worldwide, used in a variety of products such as bread and pasta. It is grown in temperate climates and is the second most grown crop in the world, after maize.",
+        "climatic_conditions": "Wheat grows best in temperate climates with moderate rainfall. The ideal temperature range for wheat cultivation is between 12°C and 18°C. It requires a cool growing season with an annual rainfall of 300-900 mm, depending on the region.",
+        "organic_fertilizer": "Farmyard manure, compost, and green manures are effective organic fertilizers for wheat. A nitrogen-based fertilizer like blood meal or alfalfa meal may also be used.",
+        "soil_type": "Loamy soil with good drainage and high organic matter is the best for wheat cultivation. The soil should be slightly alkaline with a pH range of 6.0 to 7.0.",
+        "related_video": "https://www.youtube.com/watch?v=w4J3v6rleVY"
+      },
+      {
+        "name": "Sugarcane",
+        "description": "Sugarcane is a tropical crop primarily grown for its sweet juice, which is the primary source of sugar production. It is a high-value crop grown in tropical and subtropical regions.",
+        "climatic_conditions": "Sugarcane requires a hot, humid climate with temperatures between 20°C and 30°C. It thrives in areas with annual rainfall ranging from 1,200 mm to 2,000 mm. It needs consistent moisture and sunlight to grow.",
+        "organic_fertilizer": "Manure such as compost, vermicompost, and green manure like sesbania and legumes are often used for sugarcane cultivation. It also benefits from nitrogen-based fertilizers like urea.",
+        "soil_type": "Sugarcane requires deep, well-drained soils that are rich in organic matter. Loamy and sandy loam soils are ideal for sugarcane cultivation.",
+        "related_video": "https://www.youtube.com/watch?v=8ZMQ0oyhPAI"
+      },
+      {
+        "name": "Cotton",
+        "description": "Cotton is a cash crop widely used in the textile industry. It is grown in warm climates and requires a long frost-free growing season. Cotton is mostly grown in tropical and subtropical regions.",
+        "climatic_conditions": "Cotton thrives in hot, dry climates with temperatures ranging from 21°C to 30°C. It requires 500-1,000 mm of rainfall per year and a frost-free period for optimal growth.",
+        "organic_fertilizer": "Compost, farmyard manure, and green manure crops like legumes are common organic fertilizers for cotton cultivation. Organic fertilizers help in improving soil structure and fertility.",
+        "soil_type": "Cotton grows best in well-drained, deep, sandy loam soils with a pH of 6.0 to 7.5. It prefers soils rich in organic matter with good moisture retention.",
+        "related_video": "https://www.youtube.com/watch?v=ZZS68xUGkg8"
+      },
+      {
+        "name": "Tea",
+        "description": "Tea is a popular beverage crop grown primarily in tropical and subtropical regions. It is a high-value crop, and India, China, and Sri Lanka are major producers of tea.",
+        "climatic_conditions": "Tea requires a hot and humid climate with temperatures between 20°C and 30°C. It thrives in areas with annual rainfall between 1,200 mm and 2,000 mm. Tea plants also need a high level of humidity and well-distributed rainfall throughout the year.",
+        "organic_fertilizer": "Organic fertilizers like compost, manure, and mulch are used to improve soil fertility. Green manure and nitrogen-fixing crops are also beneficial.",
+        "soil_type": "Tea grows best in acidic soils with a pH range of 4.5 to 5.5. It prefers well-drained, loamy soils with good organic content.",
+        "related_video": "https://www.youtube.com/watch?v=6sbeG04EY2Y"
+      }
+    ];
+
+    // Function to get the query parameter
+    function getQueryParam(param) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(param);
+    }
+
+    // Fetch the crop name from the query string
+    const cropName = getQueryParam('crop');
+
+    // Reference the details container
+    const detailsContainer = document.getElementById('details-content');
+
+    // Search for the crop in the JSON data
+    const crop = cropsData.find(c => c.name.toLowerCase() === cropName?.toLowerCase());
+
+    // Render the crop details
+    if (crop) {
+      detailsContainer.innerHTML = `
+        <strong>Crop Name:</strong> ${crop.name}<br>
+        <strong>Description:</strong> ${crop.description}<br><br>
+        <strong>Climatic Conditions:</strong> ${crop.climatic_conditions}<br><br>
+        <strong>Organic Fertilizer:</strong> ${crop.organic_fertilizer}<br><br>
+        <strong>Soil Type:</strong> ${crop.soil_type}<br><br>
+        <strong>Related Video:</strong> <a href="${crop.related_video}" target="_blank">Watch Video</a>
+      `;
+    } else {
+      detailsContainer.textContent = "Crop not found. Please search for another crop.";
+    }
+  </script>
+</body>
+</html>
